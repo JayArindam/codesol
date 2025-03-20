@@ -1,0 +1,45 @@
+.main-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-title-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.nav-list-above {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-mode-toggler,
+.nav-page-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.nav-heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.horizontal-rule {
+    width: 100%;
+    border: 1px solid var(--border);
+    margin-top: 10px;
+}

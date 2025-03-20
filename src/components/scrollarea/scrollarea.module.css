@@ -1,0 +1,152 @@
+/* Container for layout */
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Scrollable Sidebar */
+.scrollArea {
+  width: 30%;
+  max-width: 300px;
+  min-width: 200px;
+  height: calc(90vh - 40px);
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 15px;
+  background: var(--background);
+  border: 2px solid var(--sidebar-border); /* Improved contrast */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* List items */
+.item {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+}
+
+.active {
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Main content area (Solution Display) */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  background: var(--background);
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+  height: calc(90vh - 40px);
+}
+
+/* Language switcher */
+.languageSwitcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Language switcher buttons */
+.langButton {
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: var(--muted);
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icons inside buttons */
+.langButton .icon {
+  transition: transform 0.2s;
+}
+
+.langButton:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #f4e7dc; /* Warmer white */
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.langButton:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Active button style */
+.activeButton {
+  background: var(--border); /* Softer blue */
+  color: white;
+}
+
+/* Code block */
+.codeBlock {
+  background: var(--codeblock-background); /* Softer dark gray */
+  color: var(--codeblock-font); /* Warmer syntax color */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+/* Dark Theme */
+.dark .scrollArea,
+.dark .mainContent {
+  background: var(--sidebar);
+  color: var(--foreground);
+  border: 2px solid var(--sidebar-border);
+}
+
+.dark .item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .codeBlock {
+  background: #1e1e1e;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .scrollArea {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    overflow-x: auto;
+    border-bottom: 2px solid var(--border);
+  }
+}
