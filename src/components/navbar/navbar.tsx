@@ -1,5 +1,6 @@
 import { ModeToggle } from '../modetog/modetog'
 import { PageButton } from '../pagebutton/pagebutton'
+import Link from 'next/link'
 import './navbar.modules.css'
 
 export default function Navbar () {
@@ -10,7 +11,7 @@ export default function Navbar () {
                 <ul className='nav-list-above'>
                     <li className='nav-mode-toggler'><ModeToggle /></li>
                     <li className='nav-page-button'><PageButton /></li>
-                    <li className='nav-heading'> <a href="/">CodeSol</a></li>
+                    <li className='nav-heading'><Link href={"/"}/></li>
                 </ul>
             </div>
             <hr className='horizontal-rule'/>
