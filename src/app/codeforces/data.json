@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "question": "How to reverse a string?",
+      "solutionCpp": "#include<iostream>\nusing namespace std;\nint main() { cout << \"Reversed!\"; }",
+      "solutionJava": "class Main { public static void main(String[] args) { System.out.println(\"Reversed!\"); } }",
+      "solutionPython": "print('Reversed!')",
+      "solutionRust": "fn main() { println!(\"Reversed!\"); }"
+    },
+    {
+      "id": 2,
+      "question": "Find the factorial of a number",
+      "solutionCpp": "#include<iostream>\nusing namespace std;\nint main() { cout << \"Factorial!\"; }",
+      "solutionJava": "class Main { public static void main(String[] args) { System.out.println(\"Factorial!\"); } }",
+      "solutionPython": "print('Factorial!')",
+      "solutionRust": "fn main() { println!(\"Factorial!\"); }"
+    }
+  ]
+  

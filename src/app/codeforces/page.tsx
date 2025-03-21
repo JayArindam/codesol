@@ -1,9 +1,10 @@
-export const runtime = "edge";
+import ScrollArea from "@/components/scrollarea/scrollarea"
+import data from './data.json'
 
 export default function CodeForces () {
     return (
         <>
-            this is the page for codeforces
+            <ScrollArea data={data}/>
         </>
     )
 }
