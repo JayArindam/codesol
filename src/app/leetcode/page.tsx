@@ -1,5 +1,5 @@
-import data from './data.json'
 import ScrollArea from '@/components/scrollarea/scrollarea'
+import data from '../../../data/leetcode.json'
 
 export default function Leetcode () {
     return (

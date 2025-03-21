@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "question": "VAL114",
+    "solutionCpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int a;\n    cin >> a;\n    cout << (a==121 ?  \"Likely\" : \"Unlikely\") << endl;\n    return 0;\n}",
+    "solutionJava": "",
+    "solutionPython": "",
+    "solutionRust": ""
+  }
+]
