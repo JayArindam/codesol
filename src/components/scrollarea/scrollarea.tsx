@@ -14,6 +14,7 @@ interface Question {
   solutionJava: string;
   solutionPython: string;
   solutionRust: string;
+  questionLink: string;
 }
 
 interface ScrollAreaProps {
@@ -64,6 +65,9 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({ data }) => {
         {selectedQuestion ? (
           <>
             <h2>{selectedQuestion.question}</h2>
+            <a href={selectedQuestion.questionLink} target="_blank" rel="noopener noreferrer" className={styles.questionLink}>
+              View Question
+            </a>
 
             {/* Language Switcher with Icons */}
             <div className={styles.languageSwitcher}>
@@ -78,7 +82,7 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({ data }) => {
                 </button>
               ))}
             </div>
-
+            
             {/* Display the selected language solution */}
             <pre className={styles.codeBlock}>
               {selectedQuestion[`solution${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)}` as keyof Question]}
