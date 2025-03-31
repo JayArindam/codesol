@@ -40,9 +40,10 @@ def main():
     data = load_json(filename)
     
     question = get_user_input("Enter question name: ")
-    language = get_user_input("Enter programming language (C++/Python/Rust/Java): ").lower()
+    question_link = get_user_input("Enter question link: ")  # New link input
+    language = get_user_input("Enter programming language (C++/Python/Java): ").lower()
     
-    if language not in ["c++", "python", "rust", "java"]:
+    if language not in ["c++", "python", "java"]:
         print("Invalid language. Exiting.")
         return
     
@@ -67,16 +68,17 @@ def main():
     new_entry = {
         "id": len(data) + 1,
         "question": question,
+        "questionLink": question_link,  # Added link field
         "solutionCpp": "" if language != "c++" else code,
         "solutionJava": "" if language != "java" else code,
         "solutionPython": "" if language != "python" else code,
-        "solutionRust": "" if language != "rust" else code
     }
     
     # Check if question already exists
     for entry in data:
         if entry["question"].lower() == question.lower():
             entry[f"solution{language.capitalize()}"] = code
+            entry["questionLink"] = question_link  # Update link if already exists
             break
     else:
         data.append(new_entry)

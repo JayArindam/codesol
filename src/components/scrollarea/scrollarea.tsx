@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import styles from "./scrollarea.module.css"; // Import CSS module
-import { FaJava, FaPython, FaRust } from "react-icons/fa"; // Java, Python, Rust icons
+import { FaJava, FaPython } from "react-icons/fa"; // Java, Python icons
 import { SiCplusplus } from "react-icons/si"; // C++ icon
 
 // Define the type for JSON data
@@ -13,7 +13,6 @@ interface Question {
   solutionCpp: string;
   solutionJava: string;
   solutionPython: string;
-  solutionRust: string;
   questionLink: string;
 }
 
@@ -26,14 +25,13 @@ const languages = [
   { key: "cpp", name: "C++", type: "Compiled", icon: SiCplusplus },
   { key: "java", name: "Java", type: "JVM-Based", icon: FaJava },
   { key: "python", name: "Python", type: "Interpreted", icon: FaPython },
-  { key: "rust", name: "Rust", type: "Compiled", icon: FaRust },
 ];
 
 const ScrollArea: React.FC<ScrollAreaProps> = ({ data }) => {
   const { theme } = useTheme(); // Get theme (light/dark)
   const [mounted, setMounted] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
-  const [selectedLanguage, setSelectedLanguage] = useState<"cpp" | "java" | "python" | "rust">("cpp");
+  const [selectedLanguage, setSelectedLanguage] = useState<"cpp" | "java" | "python">("cpp");
 
   // Fix hydration issue
   useEffect(() => {
@@ -65,17 +63,15 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({ data }) => {
         {selectedQuestion ? (
           <>
             <h2>{selectedQuestion.question}</h2>
-            <a href={selectedQuestion.questionLink} target="_blank" rel="noopener noreferrer" className={styles.questionLink}>
-              View Question
-            </a>
-
+            <a href={selectedQuestion.questionLink} target="_blank" rel="noopener noreferrer" className={styles.link}>View Problem</a>
+            
             {/* Language Switcher with Icons */}
             <div className={styles.languageSwitcher}>
               {languages.map(({ key, name, type, icon: Icon }) => (
                 <button
                   key={key}
                   className={`${styles.langButton} ${selectedLanguage === key ? styles.activeButton : ""}`}
-                  onClick={() => setSelectedLanguage(key as "cpp" | "java" | "python" | "rust")}
+                  onClick={() => setSelectedLanguage(key as "cpp" | "java" | "python")}
                 >
                   <span className={styles.tooltip}>{name} - {type}</span> {/* Tooltip with language info */}
                   <Icon size={24} className={styles.icon} />

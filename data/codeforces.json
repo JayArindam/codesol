@@ -4,7 +4,6 @@
     "question": "467A",
     "solutionJava": "",
     "solutionPython": "",
-    "solutionRust": "",
     "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    int a , ans{0};\n    cin >> a;\n    for (int i{0} ; i<a ; i++) {\n        int p , q;\n        cin >> p >> q;\n        if (q - p >= 2) {\n            ans ++;\n        }\n    }\n    cout << ans;\n    return 0;\n}",
     "questionLink" : "https://codeforces.com/problemset/problem/467/A"
   },
@@ -14,7 +13,6 @@
     "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    int T;\n    cin >> T;\n    while (T--) {\n        int a , b , c;\n        cin >> a >> b >> c;\n        if (a + b == c) {\n            cout << \"Yes\" << endl;\n        }\n        else if (b + c == a) {\n            cout << \"Yes\" << endl;\n        }\n        else if (c + a == b) {\n            cout << \"Yes\" << endl;\n        }\n        else {\n            cout << \"No\" << endl;\n        }\n    }\n\n    return 0;\n}",
     "solutionJava": "",
     "solutionPython": "",
-    "solutionRust": "",
     "questionLink": "https://codeforces.com/problemset/problem/1742/A"
   }
 ]
