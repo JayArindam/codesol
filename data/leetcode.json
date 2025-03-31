@@ -7,5 +7,14 @@
     "solutionPython": "",
     "solutionRust": "",
     "questionLink": "https://leetcode.com/problems/sort-the-people/description/"
+  },
+  {
+    "id": 2,
+    "question": "3289",
+    "solutionCpp": "class Solution {\npublic:\n    vector<int> getSneakyNumbers(vector<int>& nums) {\n        vector <int> ans;\n        for (int i{0} ; i<nums.size() ; i++) {\n            for (int j{i+1} ; j<nums.size() ; j++) {\n                if (nums[i] == nums[j]) {\n                    ans.push_back(nums[i]);\n                    break;\n                }\n            }\n        }\n        return ans;\n    }\n};",
+    "solutionJava": "",
+    "solutionPython": "",
+    "solutionRust": "",
+    "questionLink": "https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/"
   }
 ]
