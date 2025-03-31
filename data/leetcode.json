@@ -18,9 +18,9 @@
   {
     "id": 3,
     "question": "1512",
-    "questionLink": "https://leetcode.com/problems/number-of-good-pairs/description/",
+    "questionLink": "https://leetcode.com/problems/number-of-good-pairs/",
     "solutionCpp": "class Solution {\npublic:\n    int numIdenticalPairs(vector<int>& nums) {\n        int ans{0};\n        for (int i{0} ; i<nums.size()-1 ; i++) {\n            for(int j{i+1} ; j<nums.size() ; j++) {\n                if (nums[i] == nums[j]) {\n                    ans++;\n                }\n            }\n        }\n        return ans;\n    }\n};",
-    "solutionJava": "",
+    "solutionJava": "class Solution {\n    public int numIdenticalPairs(int[] nums) {\n        int ans = 0;\n        for (int i=0 ; i<nums.length; i++) {\n            for (int j=i+1 ; j<nums.length; j++) {\n                if (nums[i] == nums[j]) {\n                    ans++;\n                }\n            }\n        }\n        return ans;\n    }\n}",
     "solutionPython": ""
   }
 ]
