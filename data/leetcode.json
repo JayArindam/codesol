@@ -22,5 +22,13 @@
     "solutionCpp": "class Solution {\npublic:\n    int numIdenticalPairs(vector<int>& nums) {\n        int ans{0};\n        for (int i{0} ; i<nums.size()-1 ; i++) {\n            for(int j{i+1} ; j<nums.size() ; j++) {\n                if (nums[i] == nums[j]) {\n                    ans++;\n                }\n            }\n        }\n        return ans;\n    }\n};",
     "solutionJava": "class Solution {\n    public int numIdenticalPairs(int[] nums) {\n        int ans = 0;\n        for (int i=0 ; i<nums.length; i++) {\n            for (int j=i+1 ; j<nums.length; j++) {\n                if (nums[i] == nums[j]) {\n                    ans++;\n                }\n            }\n        }\n        return ans;\n    }\n}",
     "solutionPython": "class Solution:\n    def numIdenticalPairs(self, nums: List[int]) -> int:\n        ans = 0\n        for i in range (0,len(nums)):\n            for j in range (i+1,len(nums)):\n                if (nums[i]==nums[j]):\n                    ans += 1\n        return ans"
+  },
+  {
+    "id": 4,
+    "question": "1662",
+    "questionLink": "https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/",
+    "solutionCpp": "class Solution {\npublic:\n    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {\n        string words1 = \"\";\n        string words2 = \"\";\n        for (const auto c : word1) {\n            words1 += c;\n        }\n        for (const auto c : word2) {\n            words2 += c;\n        }\n        if (words1==words2) {\n            return true;\n        }\n        return false;\n    }\n};",
+    "solutionJava": "",
+    "solutionPython": ""
   }
 ]
