@@ -20,7 +20,7 @@
     "question": "4A",
     "questionLink": "https://codeforces.com/contest/4/problem/A",
     "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    \n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int a;\n    cin >> a;\n\n    if (a%2==0 && a>2){\n        cout << \"YES\";\n    }  \n    else{\n        cout << \"NO\";\n    }\n\n    return 0;\n}",
-    "solutionJava": "",
+    "solutionJava": "import java.util.Scanner;\n\npublic class learn {\n  public static void main (String [] args) {\n    Scanner sc = new Scanner(System.in);\n    int num = sc.nextInt();\n    if (num%2 != 0) {\n      System.out.println(\"NO\");\n    }\n    else if (num%2==0 && num>2) {\n      System.out.println(\"YES\");\n    }\n    else {\n      System.out.println(\"NO\");\n    }\n    sc.close();\n  }\n}",
     "solutionPython": ""
   }
 ]
