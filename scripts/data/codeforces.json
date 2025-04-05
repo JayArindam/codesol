@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "question": "231A",
+    "questionLink": "https://codeforces.com/contest/231/problem/A",
+    "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int T,ans{0};\n    cin >> T;\n\n    while (T--) {\n        int a,b,c;\n        cin >> a >> b >> c;\n        if (a+b+c >= 2) {\n            ans++;\n        }\n    }\n    \n    cout << ans;\n    return 0;\n}",
+    "solutionJava": "",
+    "solutionPython": ""
+  }
+]
