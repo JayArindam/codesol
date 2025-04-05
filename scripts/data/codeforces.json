@@ -6,5 +6,13 @@
     "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int T,ans{0};\n    cin >> T;\n\n    while (T--) {\n        int a,b,c;\n        cin >> a >> b >> c;\n        if (a+b+c >= 2) {\n            ans++;\n        }\n    }\n    \n    cout << ans;\n    return 0;\n}",
     "solutionJava": "import java.util.Scanner;\n\npublic class c231A {\n    public static void main (String [] args) {\n        Scanner sc = new Scanner(System.in);\n        int T = sc.nextInt();\n        int ans = 0;\n        while (T>0) {\n            int a,b,c;\n            a = sc.nextInt();\n            b = sc.nextInt();\n            c = sc.nextInt();\n            if (a + b + c >= 2) {\n                ans++;\n            }\n            T--;            \n        }\n        System.out.println(ans);\n        sc.close();\n    }\n}",
     "solutionPython": ""
+  },
+  {
+    "id": 2,
+    "question": "158A",
+    "questionLink": "https://codeforces.com/contest/158/problem/A",
+    "solutionCpp": "#include <iostream>\n#include <vector>\n\nusing namespace std;\n\nint main () {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    vector <int> arr;\n    int siz,tar,tem{0},ans{0};\n    cin >> siz >> tar;\n\n    while (siz--) {\n        cin >> tem;\n        arr.push_back(tem);\n    }\n    for (int i{0} ; i<arr.size() ; i++) {\n        if (arr[i] >= arr[tar-1] && arr[i] > 0) {\n            ans++;\n        }\n    }\n    cout << ans << \"\\n\";\n    return 0;\n}",
+    "solutionJava": "",
+    "solutionPython": ""
   }
 ]
