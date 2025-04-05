@@ -26,9 +26,9 @@ def get_user_input(prompt):
 
 def main():
     platform_map = {
-        "leetcode": "data/leetcode.json",
-        "codeforces": "data/codeforces.json",
-        "codechef": "data/codechef.json"
+        "leetcode": "../data/leetcode.json",
+        "codeforces": "../data/codeforces.json",
+        "codechef": "../data/codechef.json"
     }
     
     platform = get_user_input("Enter coding platform (LeetCode/Codeforces/CodeChef): ").lower()
