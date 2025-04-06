@@ -30,5 +30,13 @@
     "solutionCpp": "class Solution {\npublic:\n    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {\n        string words1 = \"\";\n        string words2 = \"\";\n        for (const auto c : word1) {\n            words1 += c;\n        }\n        for (const auto c : word2) {\n            words2 += c;\n        }\n        if (words1==words2) {\n            return true;\n        }\n        return false;\n    }\n};",
     "solutionJava": "class Solution {\n    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {\n        StringBuilder words1 = new StringBuilder();\n        StringBuilder words2 = new StringBuilder();\n        \n        for (String w : word1) {\n            words1.append(w);\n        }\n        for (String w : word2) {\n            words2.append(w);\n        }\n        \n        return words1.toString().equals(words2.toString());\n    }\n}",
     "solutionPython": ""
+  },
+  {
+    "id": 5,
+    "question": "2",
+    "questionLink": "https://leetcode.com/problems/add-two-numbers/description/",
+    "solutionCpp": "class Solution {\npublic:\n    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\n        ListNode* dummy = new ListNode(0);\n        ListNode* curr = dummy;\n        int carry = 0;\n\n        while (l1 || l2 || carry) {\n            int sum = carry;\n            if (l1) {\n                sum += l1->val;\n                l1 = l1->next;\n            }\n            if (l2) {\n                sum += l2->val;\n                l2 = l2->next;\n            }\n            carry = sum / 10;\n            curr->next = new ListNode(sum % 10);\n            curr = curr->next;\n        }\n\n        return dummy->next;\n    }\n};",
+    "solutionJava": "",
+    "solutionPython": ""
   }
 ]
