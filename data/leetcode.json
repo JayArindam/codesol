@@ -38,5 +38,13 @@
     "solutionCpp": "class Solution {\npublic:\n    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\n        ListNode* dummy = new ListNode(0);\n        ListNode* curr = dummy;\n        int carry = 0;\n\n        while (l1 || l2 || carry) {\n            int sum = carry;\n            if (l1) {\n                sum += l1->val;\n                l1 = l1->next;\n            }\n            if (l2) {\n                sum += l2->val;\n                l2 = l2->next;\n            }\n            carry = sum / 10;\n            curr->next = new ListNode(sum % 10);\n            curr = curr->next;\n        }\n\n        return dummy->next;\n    }\n};",
     "solutionJava": "",
     "solutionPython": ""
+  },
+  {
+    "id": 6,
+    "question": "867",
+    "questionLink": "https://leetcode.com/problems/transpose-matrix/description/",
+    "solutionCpp": "class Solution {\n public:\n  vector<vector<int>> transpose(vector<vector<int>>& A) {\n    vector<vector<int>> ans(A[0].size(), vector<int>(A.size()));\n\n    for (int i = 0; i < A.size(); ++i)\n      for (int j = 0; j < A[0].size(); ++j)\n        ans[j][i] = A[i][j];\n\n    return ans;\n  }\n};",
+    "solutionJava": "",
+    "solutionPython": ""
   }
 ]
