@@ -46,5 +46,13 @@
     "solutionCpp": "class Solution {\n public:\n  vector<vector<int>> transpose(vector<vector<int>>& A) {\n    vector<vector<int>> ans(A[0].size(), vector<int>(A.size()));\n\n    for (int i = 0; i < A.size(); ++i)\n      for (int j = 0; j < A[0].size(); ++j)\n        ans[j][i] = A[i][j];\n\n    return ans;\n  }\n};",
     "solutionJava": "",
     "solutionPython": ""
+  },
+  {
+    "id": 7,
+    "question": "506",
+    "questionLink": "https://leetcode.com/problems/relative-ranks/description/",
+    "solutionCpp": "class Solution {\n public:\n  vector<string> findRelativeRanks(vector<int>& nums) {\n    const int n = nums.size();\n    vector<string> ans(n);\n    vector<int> indices(n);\n\n    iota(indices.begin(), indices.end(), 0);\n\n    ranges::sort(indices,\n                 [&](const int a, const int b) { return nums[a] > nums[b]; });\n\n    for (int i = 0; i < n; ++i)\n      if (i == 0)\n        ans[indices[0]] = \"Gold Medal\";\n      else if (i == 1)\n        ans[indices[1]] = \"Silver Medal\";\n      else if (i == 2)\n        ans[indices[2]] = \"Bronze Medal\";\n      else\n        ans[indices[i]] = to_string(i + 1);\n\n    return ans;\n  }\n};",
+    "solutionJava": "",
+    "solutionPython": ""
   }
 ]
