@@ -61,7 +61,7 @@
     "question": "50A",
     "questionLink": "https://codeforces.com/contest/50/problem/A",
     "solutionCpp": "#include <iostream>\n\nusing namespace std;\n\nint main () {\n    iostream::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int a,b;\n    cin >> a >> b;\n    cout << (a*b)/2 << endl;\n    return 0;\n}",
-    "solutionJava": "",
+    "solutionJava": "import java.util.Scanner;\n\npublic class c50A {\n    public static void main (String [] args) {\n        Scanner sc = new Scanner(System.in);\n        int a,b;\n        a = sc.nextInt();\n        b = sc.nextInt();\n        System.out.println((a*b)/2);\n        sc.close();\n    }\n}",
     "solutionPython": ""
   }
 ]
